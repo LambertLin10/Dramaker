@@ -1,0 +1,133 @@
+@CHARSET "UTF-8";
+html {
+	font-family:"微軟正黑體"
+}
+
+#title span{
+	text-algin:left; 
+	font-size: 60px;  
+	font-family: fantasy;
+	color:black;
+	position:relative;
+	height:50px;
+	padding-top:15px;
+	width:500px;
+}
+
+body {
+	background-image: url('../images/vellum.jpg');
+	width: 99%;
+}
+
+#leftcontent{
+	margin-left:1%;
+	display:inline;
+	width:26%;
+	float:left;
+	margin-top:0px;
+}
+
+#centercontent{
+	width:30%;
+	margin-right:0px;
+	padding-right:0px;
+	display:inline;
+	float:left;
+	margin-top:0px;
+}
+
+#rightcontent{
+	display:inline;	
+	width: 42%;
+	float:left;
+}
+
+#dropZone {
+	width: 330px;
+	height: 260px;
+}
+
+#scroll {
+	width: 350px;
+	height: 320px;
+	background-image: url('../images/paperbackground.png');
+	background-size: 400px, 400px;
+	background-repeat: no-repeat;
+	padding-left: 40px;
+	padding-top: 70px;
+}
+
+#elementWarehouse {
+	width: 350px;
+	height: 210px;
+	border: 3px solid black;
+	background-image:url('../images/Wwood.jpg');
+	border-radius:10px 10px 10px 10px;	
+}
+
+.example {
+	line-height: 25px;
+	margin: 2px;
+	border-radius: 10px;
+	width: 60px;
+	height: 25px;
+	float: left;
+	background-image:url('../images/wood.jpg');
+	text-align: center;
+	color: white;
+	border-style: ridge;
+}
+#result_area{
+	width:65px;
+	margin:0 auto;
+}
+
+tr{
+	height:100px;
+}
+
+.highlighted {
+            -webkit-box-shadow: 0 0 8px #B766AD;
+            -moz-box-shadow: 0 0 8px #B766AD;
+            box-shadow: 0 0 8px #B766AD;
+            cursor:pointer;
+        }
+#resulttitle{
+	background-image:url('../images/woodboard3.png');
+	background-repeat: no-repeat;
+	height:220px;
+	width:70%;
+	padding-left: 100px;
+	padding-top:20px;
+}
+
+.resultTxt{
+	position:relative;
+	color:ghostwhite;
+	left:10%;
+}
+.resultTxt2{
+	position:absolute;
+	color:ghostwhite;
+	right:370px;
+	top:140px;
+}
+
+#inner{
+	position:relative;
+	left: 30%;
+	height:20px;
+}
+#resultPic{
+	position:absolute;
+	right:200px;
+	top:100px;
+}
+#button1{
+	position:absolute;
+	left: 40px;
+	top: 400px;
+}
+.recommendArea{
+	float:left;
+}
