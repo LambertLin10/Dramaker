@@ -10,9 +10,9 @@ public class JavaR {
 		Process process = null;
 
 		try {
-			process = new ProcessBuilder("D:\\BigData.Program\\R-3.2.5\\bin\\Rscript.exe","D:\\BigData.Document\\Java_Doc\\Dramaker\\DramakerNEWR8\\Rscript\\MyScript.R",input).start();
+			process = new ProcessBuilder("D:\\BigData_Program\\R-3.2.5\\bin\\Rscript.exe","D:\\BigData_Document\\Java_Doc\\Dramaker\\DramakerNEWR8\\Rscript\\MyScript.R",input).start();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		InputStream is = process.getInputStream();
@@ -26,9 +26,9 @@ public class JavaR {
 		Process process = null;
 
 		try {
-			process = new ProcessBuilder("D:\\BigData.Program\\R-3.2.5\\bin\\Rscript.exe","D:\\BigData.Document\\Java_Doc\\Dramaker\\DramakerNEWR8\\Rscript\\MyMovie.R",input).start();
+			process = new ProcessBuilder("D:\\BigData_Program\\R-3.2.5\\bin\\Rscript.exe","D:\\BigData_Document\\Java_Doc\\Dramaker\\DramakerNEWR8\\Rscript\\MyMovie.R",input).start();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		InputStream is = process.getInputStream();

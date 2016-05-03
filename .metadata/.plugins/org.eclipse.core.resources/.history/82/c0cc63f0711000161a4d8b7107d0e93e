@@ -1,0 +1,346 @@
+
+var elementLottery = [ "animal","army","art","baseball","bear","beer","blue","boss","brother",
+                       "buffalo","camera","castle","cave","cell","cigarette","city","cliff","college",
+                       "colony","company","computer","desert","dorm","dragon","driver","duke","evil",
+                       "family","father","fire","fish","friend","galaxy","gun","helicopter","horse",
+                       "hotel","human","hunter","husband","iron","judge","jungle","kid",
+                       "knife","laboratory","lie","love","magic","manager","mask","meeting","missal",
+                       "money","monster","mother","mountain","music","news","ninja","office","paint","party",
+                       "plane","planet","president","prince","princess","queen","raven","rain","resistance",
+                       "restaurant","river","robot","science","sea","ship","sister","slave","snow","soldier",
+                       "study","train","village","water","white","wife" ];
+var elementChinese = [ "動物","軍隊","藝術","棒球","熊","啤酒","藍色","老闆","兄弟",
+                       "水牛","攝影機","城堡","山洞","細胞","香菸","城市","峭壁","大學",
+                       "殖民地","公司","電腦","沙漠","宿舍","龍","駕駛員","貴族","邪惡",
+                       "家庭","父親","火","魚","朋友","宇宙","槍","直升機","馬",
+                       "旅館","人類","獵人","丈夫","鋼鐵","法官","叢林","小孩",
+                       "刀劍","實驗室","謊言","愛","魔術","經理","面具","會議","飛彈",
+                       "金錢","怪物","母親","山","音樂","新聞","忍者","辦公室","繪畫","派對",
+                       "飛機","星球","總統","王子","公主","女王","狼吞虎嚥","雨","反抗軍",
+                       "餐廳","河流","機器人","科學","海洋","船","姊妹","奴隸","雪","士兵",
+                       "學習","火車","村莊","水","白色","妻子"]
+
+$("#button1").click(function() {
+					var randomNumber = new Array();
+
+					for (var i = 0; i < 35; i++) {
+						randomNumber[i] = (parseInt(Math.random() * 86));
+						if (i != 0) {
+							for (var j = 0; j < i; j++) {
+								while (true) {
+									if (randomNumber[i] != randomNumber[j]) {
+										break;
+									} else {
+										randomNumber[i] = (parseInt(Math.random() * 86));
+									}
+								}
+							}
+						}
+					}
+					console.log(randomNumber);
+
+					$("#elementWarehouse").html(
+							"<div id='" + elementLottery[randomNumber[0]] + "' class = 'example'>"+ elementChinese[randomNumber[0]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[1]]+ "' class = 'example'>"+ elementChinese[randomNumber[1]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[2]]+ "' class = 'example'>"+ elementChinese[randomNumber[2]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[3]]+ "' class = 'example'>"+ elementChinese[randomNumber[3]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[4]]+ "' class = 'example'>"+ elementChinese[randomNumber[4]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[5]]+ "' class = 'example'>"+ elementChinese[randomNumber[5]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[6]]+ "' class = 'example'>"+ elementChinese[randomNumber[6]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[7]]+ "' class = 'example'>"+ elementChinese[randomNumber[7]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[8]]+ "' class = 'example'>"+ elementChinese[randomNumber[8]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[9]]+ "' class = 'example'>"+ elementChinese[randomNumber[9]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[10]]+ "' class = 'example'>"+ elementChinese[randomNumber[10]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[11]]+ "' class = 'example'>"+ elementChinese[randomNumber[11]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[12]]+ "' class = 'example'>"+ elementChinese[randomNumber[12]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[13]]+ "' class = 'example'>"+ elementChinese[randomNumber[13]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[14]]+ "' class = 'example'>"+ elementChinese[randomNumber[14]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[15]]+ "' class = 'example'>"+ elementChinese[randomNumber[15]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[16]]+ "' class = 'example'>"+ elementChinese[randomNumber[16]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[17]]+ "' class = 'example'>"+ elementChinese[randomNumber[17]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[18]]+ "' class = 'example'>"+ elementChinese[randomNumber[18]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[19]]+ "' class = 'example'>"+ elementChinese[randomNumber[19]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[20]]+ "' class = 'example'>"+ elementChinese[randomNumber[20]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[21]]+ "' class = 'example'>"+ elementChinese[randomNumber[21]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[22]]+ "' class = 'example'>"+ elementChinese[randomNumber[22]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[23]]+ "' class = 'example'>"+ elementChinese[randomNumber[23]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[24]]+ "' class = 'example'>"+ elementChinese[randomNumber[24]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[25]]+ "' class = 'example'>"+ elementChinese[randomNumber[25]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[26]]+ "' class = 'example'>"+ elementChinese[randomNumber[26]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[27]]+ "' class = 'example'>"+ elementChinese[randomNumber[27]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[28]]+ "' class = 'example'>"+ elementChinese[randomNumber[28]]+ "</div>"
+							+ "<div id='"+ elementLottery[randomNumber[29]]+ "' class = 'example'>"+ elementChinese[randomNumber[29]]+ "</div>");
+
+					$('#elementWarehouse div').mouseenter(function() {
+						$(this).toggleClass('highlighted');
+					});
+					$('#elementWarehouse div').mouseleave(function() {
+						$(this).toggleClass('highlighted');
+					});
+					$("#elementWarehouse div").draggable(function() {
+						e.stopPropagation();
+					});
+					$("#dropZone").droppable({
+						accept : "#elementWarehouse div",
+						drop : function(event, ui) {
+							$(ui.draggable).appendTo($(this));
+							$(ui.draggable).css({'left':'1px', 'top':'1px'})
+
+						}
+					});
+				})
+
+$(document).ready(function() {
+					$('#button').click(function() {
+
+										var attrId = "";
+										for (var i = 0; i <= $("#dropZone div:last").index(); i++) {
+											if (i != $("#dropZone div:last").index()) {
+												attrId += $("#dropZone div:eq(" + i + ")").attr("id") + ","
+											} else {
+												attrId += $("#dropZone div:eq(" + i	+ ")").attr("id")
+											}
+										}
+										$.post("Controller",{"name" : attrId},function(data) {
+															//var scoreLv = data.substring(0,7);
+															var movieRecomTmp = data.substring(10,data.lenght);
+															var movieRecommended = movieRecomTmp.split("\"");
+															var r = 1;
+															for (var i = 0; i < movieRecommended.length; i++) {
+																if (movieRecommended[i].substring(0,1) != ' ') {
+																	$("#recommendArea" + r).html('<img id="posters" src="MoviePosters/' + movieRecommended[i] + '.jpg">')
+																	r++;
+																}
+															}
+
+															switch (data) {
+															case '[1] "S"':
+																var inner = d3.select('.inner');
+
+																inner.style({
+																			'width' : '0%',
+																			'background-color' : '#444444'
+																		});
+
+																inner.transition()
+																		.duration(3000)
+																		.style(
+																				{
+																					'width' : '100%',
+																					'background-color' : '#FF0000'
+																				})
+																		.attrTween("d",function() {
+																					return function(n) {
+																						inner.text(n * 8.151);
+																					};
+																				})
+																		.ease("easeOutQuint");
+																$("#resultPic").html("<img src='./images/S.png' alt='S'>");
+																break;
+															case '[1] "A"':
+																var inner = d3.select('.inner');
+
+																inner.style({
+																			'width' : '0%',
+																			'background-color' : '#444444'
+																		});
+
+																inner.transition()
+																		.duration(3000)
+																		.style({
+																					'width' : '90%',
+																					'background-color' : '#FF5511'
+																				})
+																		.attrTween("d",function() {
+																					return function(n) {
+																						inner.text(n * 7.822);
+																					};
+																				})
+																		.ease("bounce");
+																$("#resultPic")
+																		.html("<img src='./images/A.png' alt='A'>");
+																break;
+															case '[1] "B"':
+																var inner = d3.select('.inner');
+
+																inner.style({
+																			'width' : '0%',
+																			'background-color' : '#444444'
+																		});
+
+																inner.transition()
+																		.duration(3000)
+																		.style(
+																				{
+																					'width' : '80%',
+																					'background-color' : '#FF8800'
+																				})
+																		.attrTween("d",function() {
+																			return function(n) {
+																						inner.text(n * 7.753);
+																					};
+																				})
+																		.ease("bounce");
+																$("#resultPic").html("<img src='./images/B.png' alt='B'>");
+																break;
+															case '[1] "C"':
+																var inner = d3.select('.inner');
+
+																inner.style({
+																			'width' : '0%',
+																			'background-color' : '#444444'
+																		});
+
+																inner.transition()
+																		.duration(3000)
+																		.style({
+																					'width' : '70%',
+																					'background-color' : '#FFBB00'
+																				})
+																		.attrTween("d",function() {
+																					return function(
+																							n) {
+																						inner.text(n * 7.557);
+																					};
+																				})
+																		.ease("bounce");
+																$("#resultPic").html("<img src='./images/C.png' alt='C'>");
+																break;
+															case '[1] "D"':
+																var inner = d3.select('.inner');
+
+																inner.style({
+																			'width' : '0%',
+																			'background-color' : '#444444'
+																		});
+
+																inner.transition()
+																		.duration(3000)
+																		.style({
+																					'width' : '60%',
+																					'background-color' : '#FFFF00'
+																				})
+																		.attrTween("d",function() {
+																					return function(n) {
+																						inner.text(n * 7.358);
+																					};
+																				})
+																		.ease("bounce");
+																$("#resultPic").html("<img src='./images/D.png' alt='D'>");
+																break;
+															case '[1] "E"':
+																var inner = d3.select('.inner');
+
+																inner.style({
+																			'width' : '0%',
+																			'background-color' : '#444444'
+																		});
+
+																inner.transition()
+																		.duration(3000)
+																		.style({
+																					'width' : '50%',
+																					'background-color' : '#BBFF00'
+																				})
+																		.attrTween("d",function() {
+																					return function(n) {
+																						inner.text(n * 7.125);
+																					};
+																				})
+																		.ease("bounce");
+																$("#resultPic").html("<img src='./images/E.png' alt='E'>");
+																break;
+															case '[1] "F"':
+																var inner = d3.select('.inner');
+
+																inner.style({
+																			'width' : '0%',
+																			'background-color' : '#444444'
+																		});
+
+																inner.transition()
+																		.duration(3000)
+																		.style({
+																					'width' : '40%',
+																					'background-color' : '#00FFCC'
+																				})
+																		.attrTween("d",function() {
+																					return function(
+																							n) {
+																						inner.text(n * 6.875);
+																					};
+																				})
+																		.ease("bounce");
+																$("#resultPic").html("<img src='./images/F.png' alt='F'>");
+																break;
+															case '[1] "G"':
+																var inner = d3.select('.inner');
+
+																inner.style({
+																			'width' : '0%',
+																			'background-color' : '#444444'
+																		});
+
+																inner.transition()
+																		.duration(3000)
+																		.style({
+																					'width' : '30%',
+																					'background-color' : '#00BBFF'
+																				})
+																		.attrTween("d",function() {
+																					return function(n) {
+																						inner.text(n * 6.622);
+																					};
+																				})
+																		.ease("bounce");
+																$("#resultPic").html("<img src='./images/G.png' alt='G'>");
+																break;
+															case '[1] "H"':
+																var inner = d3.select('.inner');
+
+																inner.style({
+																			'width' : '0%',
+																			'background-color' : '#444444'
+																		});
+
+																inner.transition()
+																		.duration(3000)
+																		.style({
+																					'width' : '20%',
+																					'background-color' : '#5500FF'
+																				})
+																		.attrTween("d",function() {
+																					return function(n) {
+																						inner.text(n * 6.368);
+																					};
+																				})
+																		.ease("bounce");
+																$("#resultPic").html("<img src='./images/H.png' alt='H'>");
+																break;
+															case '[1] "I"':
+																var inner = d3.select('.inner');
+
+																inner.style({
+																			'width' : '0%',
+																			'background-color' : '#444444'
+																		});
+
+																inner.transition()
+																		.duration(3000)
+																		.style({
+																					'width' : '10%',
+																					'background-color' : '#9900FF'
+																				})
+																		.attrTween("d",function() {
+																					return function(n) {
+																						inner.text(n * 5.844);
+																					};
+																				})
+																		.ease("bounce");
+																$("#resultPic").html("<img src='./images/I.png' alt='I'>");
+																break;
+															}
+
+														}, "text");
+									});
+				});

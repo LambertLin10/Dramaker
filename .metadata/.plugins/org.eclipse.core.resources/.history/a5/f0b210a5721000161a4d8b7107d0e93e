@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>DRAMA MAKER</title>
+	<link rel="stylesheet" href="css/Dramaker.css">
+	<script src="js/jquery-1.12.3.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js"></script>
+	
+</head>
+<body>
+	<header>
+		
+	</header>
+	
+	<div id="content">
+		<div id="leftcontent">
+		<div id="title">
+			<span>DramaMaker</span>
+		</div>
+			<p style="font-size:25px; font-weight: bold">選取電影題材元素</p>
+			<div id="elementWarehouse"></div>
+			<button id="button1" type="button">隨機元素</button>	
+		</div>
+
+		<div id="centercontent">
+			<div id="scroll">
+				<div id="dropZone"></div>
+			</div>
+			<div id="result_area">	
+					<button id="button" type="button">確認</button>	
+						
+			</div>
+		</div>
+		
+		
+		<div id="rightcontent">
+			<div id="resulttitle">
+				<p class="resultTxt">預估IMDB得分</p>
+				<div class="inner"></div>	
+				<p class="resultTxt2">評價等級</p>
+				<div id="resultPic" style="height:80px"></div>
+			</div>
+			
+			<div id="re">
+				<p style="font-weight:bold">推薦影片：</p>
+				<div class="recommendArea" id="recommendArea1"></div>
+				<div class="recommendArea" id="recommendArea2"></div>
+				<div class="recommendArea" id="recommendArea3"></div>
+			</div>
+		</div>
+		
+	</div>
+	
+	
+	<footer>
+		<div id="div1"></div>
+	</footer>
+	
+	<script src="js/DramakerJQ.js"></script>
+	
+</body>
+</html>

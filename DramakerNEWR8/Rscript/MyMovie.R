@@ -1,7 +1,8 @@
-ï»¿ library(tidyr)
- library(data.table)
- library(dplyr)
- library(reshape2)
+library(tidyr)
+library(data.table)
+library(dplyr)
+library(reshape2)
+library(gtools)
 
 argv<-commandArgs(TRUE)
 
@@ -11,11 +12,14 @@ getelementmatrix=function(...)
 {
 # x        <-c("animal","army")
 # x        <-c("hunter","knife","missal")
+# x        <-c("hunter","knife","missal","animal","army")
 x        <-c(...)
 x2       <-strsplit(x,split=",",fixed=T)
-sumtable <-read.csv("D:/BigData.Document/Java_Doc/Dramaker/DramakerNEWR8/Rscript/summary.csv")
+sumtable <-read.csv("D:/BigData_Document/Java_Doc/Dramaker/DramakerNEWR8/Rscript/summary.csv")
 sumtable <-sumtable[order(sumtable$IMDB,decreasing = TRUE),]
 
+
+#1.?¨é8ç¬¦å? A&B&C
 if(length(x2)==1){
 moviename<-filter(sumtable,sumtable[,unlist(x2)[1]]=="Y")
 }else if(length(x2)==2){
@@ -32,21 +36,52 @@ moviename<-filter(sumtable,sumtable[,unlist(x2)[1]]=="Y",sumtable[,unlist(x2)[2]
 
 
 
-#å¦‚æžœæ‰¾ä¸åˆ°3
-if(as.character(moviename[1:3,1])[1]%>%is.na()){
-  moviename<-filter(sumtable,sumtable[,unlist(x2)[1]]=="Y",sumtable[,unlist(x2)[2]]=="Y",sumtable[,unlist(x2)[3]]=="Y")  
+##2.?¾ä??°æ”¹?–éš¨æ©Ÿä??w?
+#2.1?w??¨æ??’å?
+x2.random<-gtools::permute(unlist(x2))
+
+#2.2æª¢æŸ¥moviename?¯å¦?ºç©º??
+movienameisna<-moviename[1:3,1][1]%>%as.character%>%is.na()
+
+#2.3?‹å?æª¢æŸ¥
+if(length(x2)==1 && movienameisna){
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y")
+}else if(length(x2)==2 && movienameisna){
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" | sumtable[,x2.random[2]]=="Y")
+}else if(length(x2)==3 && movienameisna){
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" & sumtable[,x2.random[2]]=="Y")
+}else if(length(x2)==4 && movienameisna){
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" & sumtable[,x2.random[2]]=="Y" & sumtable[,x2.random[3]]=="Y")
+}else if(length(x2)==5 && movienameisna){
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" & sumtable[,x2.random[2]]=="Y" & sumtable[,x2.random[3]]=="Y")
+}else if(length(x2)==6 && movienameisna){
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" & sumtable[,x2.random[2]]=="Y" & sumtable[,x2.random[3]]=="Y")
 }
-#å¦‚æžœæ‰¾ä¸åˆ°2
-if(as.character(moviename[1:3,1])[1]%>%is.na()){
-  moviename<-filter(sumtable,sumtable[,unlist(x2)[1]]=="Y",sumtable[,unlist(x2)[2]]=="Y")  
+
+
+##3.ä»¥é˜²?¬ä?A|B|C
+#3.1æª¢æŸ¥moviename?¯å¦?ºç©º??
+movienameisna<-moviename[1:3,1][1]%>%as.character%>%is.na()
+#3.2?‹å?æª¢æŸ¥
+if(length(x2)==1 && movienameisna){
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y")
+}else if(length(x2)==2 && movienameisna){
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" | sumtable[,x2.random[2]]=="Y")
+}else if(length(x2)==3 && movienameisna){
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" | sumtable[,x2.random[2]]=="Y")
+}else if(length(x2)==4 && movienameisna){
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" | sumtable[,x2.random[2]]=="Y" | sumtable[,x2.random[3]]=="Y")
+}else if(length(x2)==5 && movienameisna){
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" | sumtable[,x2.random[2]]=="Y" | sumtable[,x2.random[3]]=="Y")
+}else if(length(x2)==6 && movienameisna){
+  moviename<-filter(sumtable,sumtable[,x2.random[1]]=="Y" | sumtable[,x2.random[2]]=="Y" | sumtable[,x2.random[3]]=="Y")
 }
-#å¦‚æžœæ‰¾ä¸åˆ°1
-if(as.character(moviename[1:3,1])[1]%>%is.na()){
-  moviename<-filter(sumtable,sumtable[,unlist(x2)[1]]=="Y")  
-}
+
 
 print(as.character(moviename[1:3,1]))
+
 }
 
-#getelementmatrix("water","white")
+
+# getelementmatrix("hunter","knife","missal","animal","army")
 getelementmatrix(argv)
